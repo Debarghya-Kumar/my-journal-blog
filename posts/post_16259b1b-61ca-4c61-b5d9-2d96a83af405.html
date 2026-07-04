@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudden story in Mumbai - Personal Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="nav-back">
+        <a href="../index.html">← Back to Blog</a>
+        <button class="share-btn" onclick="copyShareLink()" style="margin-left: 20px; background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.9rem;">🔗 Share</button>
+    </div>
+
+    <article class="post-detail">
+        <div class="cover-container"><img class="cover-img" src="../media/cover_16259b1b-61ca-4c61-b5d9-2d96a83af405.jpg" alt="Cover banner"></div>
+        
+        <header class="post-header">
+            <h1 class="post-title-detail">Sudden story in Mumbai</h1>
+            <div class="post-meta">
+                <span class="post-date">July 4, 2026</span>
+                <span class="post-divider">•</span>
+                <span class="post-category" style="color: #E3008C; font-weight: 600;">Personal</span>
+                
+            </div>
+        </header>
+
+        <section class="post-content">
+            <h1>Journal: Exploring Mumbai&#39;s Coastline and Famous Street Food</h1><br><p>Visiting Mumbai was one of the most exciting and memorable experiences of my life. Known as the &quot;City of Dreams,&quot; Mumbai offers a perfect combination of breathtaking coastal views, rich culture, and delicious street food. My journey along the city&#39;s coastline and through its famous food streets allowed me to experience the true spirit of Mumbai.</p><p>The day began with a visit to the iconic Marine Drive. As I walked along the curved boulevard, I was greeted by the refreshing sea breeze and the soothing sound of waves crashing against the rocks. The scenic view of the Arabian Sea was mesmerizing, especially in the early morning when the weather was pleasant and the crowds were smaller. The long promenade was filled with people jogging, cycling, and enjoying their morning walks. I spent some time sitting by the sea, admiring the beautiful skyline and the peaceful atmosphere.</p><p>From there, I visited Girgaon Chowpatty, one of Mumbai&#39;s most famous beaches. Families, tourists, and local vendors created a lively environment. The golden sand, colorful stalls, and cheerful ambiance made the place vibrant and welcoming. Watching children play on the beach while the sun slowly moved across the sky added to the charm of the experience.</p><p>No visit to Mumbai is complete without exploring its legendary street food. My food tour began with the city&#39;s signature dish, Vada Pav. The crispy potato fritter inside a soft bun, served with spicy chutneys and fried green chilies, was incredibly flavorful. Despite its simplicity, it perfectly reflected Mumbai&#39;s fast-paced lifestyle.</p><p>Next, I tasted Pav Bhaji, a rich mixture of mashed vegetables cooked with aromatic spices and served with buttered bread rolls. The buttery aroma and spicy flavors made it one of my favorite dishes of the day. I also enjoyed a plate of Bhel Puri, which combined puffed rice, vegetables, tangy tamarind chutney, and crunchy sev to create a refreshing and delicious snack.</p><p>The food journey continued with Sev Puri&gt; and Pani Puri. The burst of spicy and tangy flavored water inside the crispy puris was both exciting and unforgettable. Every bite offered a unique combination of textures and tastes that reflected the diversity of Mumbai&#39;s cuisine. To end the meal, I enjoyed a chilled glass of fresh sugarcane juice and a serving of traditional kulfi, which provided the perfect sweet finish.</p><p>As evening approached, I returned to Marine Drive to witness the spectacular sunset. The sky transformed into shades of orange, pink, and purple while the city lights gradually illuminated the coastline, creating the famous &quot;Queen&#39;s Necklace&quot; effect. It was a magical sight that perfectly concluded my day.</p><p>This trip taught me that Mumbai is much more than a busy metropolitan city. Its beautiful coastline offers peace and relaxation, while its vibrant street food represents the city&#39;s cultural diversity and energetic lifestyle. The warmth of the people, the breathtaking sea views, and the unforgettable flavors made this journey truly special. I returned home with wonderful memories and a strong desire to visit Mumbai again in the future.</p>
+            
+        </section>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 Personal Journal. Generated via JournalApp.</p>
+    </footer>
+
+    <!-- Overlay Lightbox Container -->
+    <div id="lightbox" onclick="closeLightbox()" style="display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.25s ease; cursor: pointer;">
+        <img id="lightbox-img" src="" style="max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 4px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); transform: scale(0.95); transition: transform 0.25s ease;" alt="Enlarged photo">
+    </div>
+
+    <script>
+        function copyShareLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Link copied to clipboard!');
+        }
+        function openLightbox(url) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = url;
+            lightbox.style.display = 'flex';
+            setTimeout(() => {
+                lightbox.style.opacity = '1';
+                img.style.transform = 'scale(1)';
+            }, 10);
+        }
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            lightbox.style.opacity = '0';
+            img.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+            }, 250);
+        }
+    </script>
+</body>
+</html>
